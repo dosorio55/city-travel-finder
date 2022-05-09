@@ -10,7 +10,9 @@ import { ICity } from './models/city.model';
 export class CityListComponent implements OnInit {
 
   public listedCities: ICity[] = cities as ICity[];
+  public filteredCities: ICity[] = this.listedCities;
   public modify: boolean = false;
+  public filterValue: string = "";
 
   constructor() { }
 
@@ -22,7 +24,12 @@ export class CityListComponent implements OnInit {
   }
 
   onDelete(id: string){
-    this.listedCities = this.listedCities.filter(city => city.id !== id)
+    this.filteredCities = this.listedCities.filter(city => city.id !== id)
   }
 
+  onFilter (){
+    this.filteredCities = this.listedCities.filter(city => {
+      console.log(this.filterValue)
+      return city.name.toLocaleLowerCase().includes(this.filterValue.toLocaleLowerCase())})
+  }
 }

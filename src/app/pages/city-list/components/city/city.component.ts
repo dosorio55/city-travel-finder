@@ -13,6 +13,7 @@ export class CityComponent implements OnInit {
   @Output() public delete: EventEmitter<void> = new EventEmitter();
   
   public favorite: boolean = false;
+  public selected: boolean = false;
 
   constructor() { }
 
@@ -25,5 +26,9 @@ export class CityComponent implements OnInit {
 
   public onDelete () {
     this.delete.emit();
+  }
+
+  public imgSelected (){
+    this.selected = !this.selected;
   }
 }
