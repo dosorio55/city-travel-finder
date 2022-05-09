@@ -1,9 +1,15 @@
 <div class="cityContainer" *ngIf="city">
-    <i class="fa-solid fa-heart cityContainer__icon" 
-    (click)="clickFavorite()"
-    [ngStyle]="{'color': favorite ? 'red' : 'black'}"></i>
+    <i class="fa-solid fa-heart cityContainer__icon" (click)="clickFavorite()"
+        [ngStyle]="{'color': favorite ? 'red' : 'black'}">
+    </i>
 
+    <i class="fa-solid fa-circle-xmark cityContainer__ex"
+    *ngIf="canDelete" 
+    (click)="onDelete()"
+    ></i>
+    
     <img class="cityContainer__img" [src]="city.image" alt="imagen de producto">
+
     <div class="cityContainer__overlay">
         <p class="cityContainer__name">{{city.name}}</p>
         <p class="cityContainer__price">${{city.price}}</p>

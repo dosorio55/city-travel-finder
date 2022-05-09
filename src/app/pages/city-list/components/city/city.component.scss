@@ -23,6 +23,13 @@
         cursor: pointer;
     }
 
+    &__ex{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+
     &__overlay {
         color: red;
         position: absolute;

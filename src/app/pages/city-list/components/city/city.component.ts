@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ICity } from '../../models/city.model';
 
 @Component({
@@ -10,6 +10,7 @@ export class CityComponent implements OnInit {
 
   @Input() public city?: ICity;
   @Input() public canDelete: boolean = false;
+  @Output() public delete: EventEmitter<void> = new EventEmitter();
   
   public favorite: boolean = false;
 
@@ -20,5 +21,9 @@ export class CityComponent implements OnInit {
 
   public clickFavorite (){
     this.favorite = !this.favorite
+  }
+
+  public onDelete () {
+    this.delete.emit();
   }
 }

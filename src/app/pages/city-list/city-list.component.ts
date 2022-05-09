@@ -10,10 +10,19 @@ import { ICity } from './models/city.model';
 export class CityListComponent implements OnInit {
 
   public listedCities: ICity[] = cities as ICity[];
+  public modify: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onModify(){
+    this.modify = !this.modify;
+  }
+
+  onDelete(id: string){
+    this.listedCities = this.listedCities.filter(city => city.id !== id)
   }
 
 }

@@ -358,23 +358,5 @@ export const cities = [
    "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
    "category": "Practical",
    "id": "40"
-  },
-  {
-   "createdAt": "2022-05-08T04:36:13.764Z",
-   "name": "Madalynburgh",
-   "image": "http://loremflickr.com/640/480",
-   "price": "805.00",
-   "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-   "category": "Practical",
-   "id": "41"
-  },
-  {
-   "createdAt": "2022-05-08T03:12:20.753Z",
-   "name": "Port Ruthebury",
-   "image": "http://loremflickr.com/640/480",
-   "price": "319.00",
-   "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-   "category": "Elegant",
-   "id": "42"
   }
  ]
