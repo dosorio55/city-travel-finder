@@ -2,13 +2,13 @@
 <header>
     
     <div class="headerContainer">
-        <input [(ngModel)]="filterValue" (change)="onFilter()" type="text">
         <p class="headerContainer__favorites">FAVORITES</p>
         <p class="headerContainer__modify" (click)="onModify()">MODIFY</p>
     </div>
 </header>
 <body>
     
+    <input [(ngModel)]="filterValue" (change)="onFilter()" type="text">
     <div class="cityContainer">
         <app-city
         *ngFor="let city of filteredCities"
