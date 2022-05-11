@@ -13,24 +13,35 @@ export class CityListComponent implements OnInit {
   public filteredCities: ICity[] = this.listedCities;
   public modify: boolean = false;
   public filterValue: string = "";
+  public numberSelected: number = 0
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onModify(){
+  onModify() {
     this.modify = !this.modify;
   }
 
-  onDelete(id: string){
+  onDelete(id: string) {
     this.listedCities = this.listedCities.filter(city => city.id !== id)
     this.onFilter()
   }
 
-  onFilter (){
+  onFilter() {
     this.filteredCities = this.listedCities.filter(city => {
       console.log(this.filterValue)
-      return city.name.toLocaleLowerCase().includes(this.filterValue.toLocaleLowerCase())})
+      return city.name.toLocaleLowerCase().includes(this.filterValue.toLocaleLowerCase())
+    })
+  }
+
+  onSelect(isSelected: boolean) {
+    if (isSelected) {
+      this.numberSelected++
+    } else {
+      this.numberSelected--
+      
+    }
   }
 }

@@ -1,6 +1,15 @@
 <p class="headerContainer__favorites">FAVORITES</p>
 <p class="headerContainer__modify" (click)="onModify()">MODIFY</p>
+<p>Tenemos {{numberSelected}} seleccionados</p>
+
 <input [(ngModel)]="filterValue" (change)="onFilter()" type="text">
 <div class="cityContainer">
-    <app-city *ngFor="let city of filteredCities" [city]="city" [canDelete]="modify" (delete)="onDelete(city.id)">
-    </app-city>
+
+    <app-city *ngFor="let city of filteredCities" 
+    [city]="city" 
+    [canDelete]="modify" 
+    (delete)="onDelete(city.id)"
+    (isSelected)="onSelect($event)"
+    
+    ></app-city>
+    </div>
