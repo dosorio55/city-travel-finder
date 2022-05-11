@@ -11,5 +11,8 @@
 .cityContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 0 3.5rem;
+    // justify-content: space-between;
+    // align-items: center;
 }
