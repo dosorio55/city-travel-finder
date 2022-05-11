@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CityListComponent } from './pages/city-list/city-list.component';
 import { CityComponent } from './pages/city-list/components/city/city.component';
+import { HeaderComponent } from './pages/city-list/components/header/header.component';
+import { FooterComponent } from './pages/city-list/components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CityListComponent,
-    CityComponent
+    CityComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -25,6 +25,7 @@ export class CityListComponent implements OnInit {
 
   onDelete(id: string){
     this.filteredCities = this.listedCities.filter(city => city.id !== id)
+    this.onFilter()
   }
 
   onFilter (){
