@@ -1,24 +1,6 @@
-<app-header></app-header>
-<header>
-    
-    <div class="headerContainer">
-        <p class="headerContainer__favorites">FAVORITES</p>
-        <p class="headerContainer__modify" (click)="onModify()">MODIFY</p>
-    </div>
-</header>
-<body>
-    
-    <input [(ngModel)]="filterValue" (change)="onFilter()" type="text">
-    <div class="cityContainer">
-        <app-city
-        *ngFor="let city of filteredCities"
-        [city]="city"
-        [canDelete]="modify"
-        (delete)="onDelete(city.id)"
-        ></app-city>
-        
-        
-    </div>
-</body>
-
-<app-footer></app-footer>
+<p class="headerContainer__favorites">FAVORITES</p>
+<p class="headerContainer__modify" (click)="onModify()">MODIFY</p>
+<input [(ngModel)]="filterValue" (change)="onFilter()" type="text">
+<div class="cityContainer">
+    <app-city *ngFor="let city of filteredCities" [city]="city" [canDelete]="modify" (delete)="onDelete(city.id)">
+    </app-city>
