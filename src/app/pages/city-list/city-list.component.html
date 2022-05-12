@@ -1,9 +1,11 @@
-<p class="headerContainer__favorites">FAVORITES</p>
-<p class="headerContainer__modify" (click)="onModify()">MODIFY</p>
-<p>Tenemos {{numberSelected}} seleccionados</p>
-<p>tienes seleccionado a {{selectedCity}}</p>
+<div class="topHeroContainer">
+    <input [(ngModel)]="filterValue" class="topHeroContainer__item topHeroContainer__input" (change)="onFilter()" type="text">
+    <p class="topHeroContainer__item">FAVORITES</p>
+    <p class="topHeroContainer__item" (click)="onModify()">MODIFY</p>
+    <p class="topHeroContainer__item">Tenemos {{numberSelected}} seleccionados</p>
+    <!-- <p class="topHeroContainer__item">tienes seleccionado a {{selectedCity}}</p> -->
+</div>
 
-<input [(ngModel)]="filterValue" (change)="onFilter()" type="text">
 <div class="cityContainer">
 
     <app-city *ngFor="let city of filteredCities" 

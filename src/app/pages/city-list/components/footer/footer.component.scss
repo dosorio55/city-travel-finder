@@ -1,0 +1,23 @@
+
+.footerDiv {
+
+    display: flex;
+    justify-content: center;
+
+    &__Container{
+
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+
+
+    &__img{
+        border-radius: 5px;
+        padding-right: 10px;
+        display: flex;
+        width: 30px;
+        height: 30px;
+    
+    }
+}

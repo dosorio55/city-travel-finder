@@ -15,7 +15,7 @@ export class CityListComponent implements OnInit {
   public filterValue: string = "";
   public numberSelected: number = 0
   public selectedCity: string = "";
-  
+
   constructor() { }
 
   ngOnInit(): void {
@@ -32,7 +32,6 @@ export class CityListComponent implements OnInit {
 
   onFilter() {
     this.filteredCities = this.listedCities.filter(city => {
-      console.log(this.filterValue)
       return city.name.toLocaleLowerCase().includes(this.filterValue.toLocaleLowerCase())
     })
   }
@@ -42,11 +41,10 @@ export class CityListComponent implements OnInit {
       this.numberSelected++
     } else {
       this.numberSelected--
-      
     }
   }
 
-  getName(cityName: string){
- this.selectedCity = cityName
+  getName(cityName: string) {
+    this.selectedCity = cityName
   }
 }
