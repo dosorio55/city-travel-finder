@@ -14,7 +14,7 @@ export class CityListComponent implements OnInit {
   public modify: boolean = false;
   public filterValue: string = "";
   public numberSelected: number = 0
-
+  public selectedCity: string = "";
   constructor() { }
 
   ngOnInit(): void {
@@ -43,5 +43,9 @@ export class CityListComponent implements OnInit {
       this.numberSelected--
       
     }
+  }
+
+  getName(cityName: string){
+ this.selectedCity = cityName
   }
 }
