@@ -12,10 +12,12 @@ export class CityComponent implements OnInit {
   @Input() public canDelete: boolean = false;
   @Output() public delete: EventEmitter<void> = new EventEmitter();
   @Output() public isSelected: EventEmitter<boolean> = new EventEmitter();
-
   
+
+  public zoom: boolean = false;
   public favorite: boolean = false;
   public selected: boolean = false;
+  public varZoom: boolean = false;
 
   constructor() { }
 
@@ -31,8 +33,8 @@ export class CityComponent implements OnInit {
   }
 
   public imgSelected (){
+    this.varZoom = !this.varZoom;
     this.selected = !this.selected;
     this.isSelected.emit(this.selected);
-
   }
 }

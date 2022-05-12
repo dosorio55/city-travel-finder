@@ -15,6 +15,7 @@ export class CityListComponent implements OnInit {
   public filterValue: string = "";
   public numberSelected: number = 0
   public selectedCity: string = "";
+  
   constructor() { }
 
   ngOnInit(): void {
